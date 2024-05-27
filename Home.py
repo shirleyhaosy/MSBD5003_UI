@@ -10,6 +10,6 @@ st.markdown(
     """
     This Streamlit Web App is the UI of Group 9's MSBD5003 Course Project
     ## Please select the variable you would like to explore:
-    - [Number of Orders]()
+    - [Number of Orders](/Number_of_Orders)
 """
 )
