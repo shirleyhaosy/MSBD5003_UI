@@ -10,6 +10,7 @@ st.markdown(
     """
     This Streamlit Web App is the UI of Group 9's MSBD5003 Course Project
     ### Please select the variable you would like to explore (options are also availale on the sidebar):
+    - [Average Speed by Hour](/Average_Speed_by_Hour)
     - [Number of Orders](/Number_of_Orders)
     """
 )

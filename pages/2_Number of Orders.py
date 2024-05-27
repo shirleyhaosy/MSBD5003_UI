@@ -18,7 +18,7 @@ daily_num_order = daily_num_order.rename({"count": "Number of orders"}, axis = '
 daily_num_order["date"] = pd.to_datetime(daily_num_order["date"]).dt.date
 
 date_option = st.date_input(
-    "#Please select the period (YYYY-MM-DD) of data to be visualized. Default is the whole timespan of the data set.",
+    "Please select the period (YYYY-MM-DD) of data to be visualized. Default is the whole timespan of the data set.",
     (min(daily_num_order["date"]), max(daily_num_order["date"])),
     min_value = min(daily_num_order["date"]),
     max_value = max(daily_num_order["date"]),
