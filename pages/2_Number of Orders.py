@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import datetime
 
-data_dir = 'https://github.com/shirleyhaosy/MSBD5003_UI/blob/main/data/'
+data_dir = './data/'
 daily_num_order_path = data_dir + "Num_order_by_date.csv"
 hour_num_order_path = data_dir + "Daily_avg_num_order_by_hour.csv"
 loc_num_order_path = data_dir + "daily_num_order_by_pickup_loc.csv"
