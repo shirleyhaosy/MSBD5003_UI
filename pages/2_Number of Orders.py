@@ -32,7 +32,7 @@ try:
   st.line_chart(data = daily_num_order[(daily_num_order['date']>=date_option[0]) & \
         (daily_num_order['date']<=date_option[1])], x = "date", y = "Number of orders")
 except IndexError:
-  st.text("Please make sure both start and end date have been entered.")
+  st.markdown("Please make sure both start and end date have been entered.")
 
 
 st.subheader('Daily average number of orders by hour')
