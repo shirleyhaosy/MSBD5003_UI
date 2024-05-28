@@ -1,10 +1,10 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Exploring Rideshare in New York",
+    page_title="Exploring Rideshare Market in New York",
 )
 
-st.title("Exploring Rideshare in New York")
+st.title("Exploring Rideshare Market in New York")
 
 st.markdown(
     """
