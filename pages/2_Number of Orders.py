@@ -17,20 +17,21 @@ daily_num_order = daily_num_order.rename({"count": "Number of orders"}, axis = '
 # convert to date from string
 daily_num_order["date"] = pd.to_datetime(daily_num_order["date"]).dt.date
 
-date_option = st.date_input(
+
+try:
+  date_option = st.date_input(
     "Please select the period (YYYY-MM-DD) of data to be visualized. Default is the whole timespan of the data set.",
     (min(daily_num_order["date"]), max(daily_num_order["date"])),
     min_value = min(daily_num_order["date"]),
     max_value = max(daily_num_order["date"]),
     format="YYYY-MM-DD",
-)
-if date_option[0] == date_option[1]:
+  )
+  if date_option[0] == date_option[1]:
     st.text('Please choose an end date that is larger than start date.')
-# check if start date < end date
-try:
+  # check if start date < end date
   st.line_chart(data = daily_num_order[(daily_num_order['date']>=date_option[0]) & \
         (daily_num_order['date']<=date_option[1])], x = "date", y = "Number of orders")
-except:
+except IndexError:
   st.text("Please make sure both start and end date have been entered.")
 
 
