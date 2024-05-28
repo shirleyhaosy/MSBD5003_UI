@@ -17,7 +17,6 @@ daily_num_order = daily_num_order.rename({"count": "Number of orders"}, axis = '
 # convert to date from string
 daily_num_order["date"] = pd.to_datetime(daily_num_order["date"]).dt.date
 
-
 try:
   date_option = st.date_input(
     "Please select the period (YYYY-MM-DD) of data to be visualized. Default is the whole timespan of the data set.",
@@ -27,7 +26,7 @@ try:
     format="YYYY-MM-DD",
   )
   if date_option[0] == date_option[1]:
-    st.text('Please choose an end date that is larger than start date.')
+    st.markdown('Please choose an end date that is larger than start date.')
   # check if start date < end date
   st.line_chart(data = daily_num_order[(daily_num_order['date']>=date_option[0]) & \
         (daily_num_order['date']<=date_option[1])], x = "date", y = "Number of orders")
@@ -45,7 +44,7 @@ st.subheader('Daily average number of orders by pickup location')
 loc_num_order = pd.read_csv(loc_num_order_path)
 loc_num_order = loc_num_order.rename({"avg_count": "Number of orders"}, axis = 'columns')
 loc_option = st.selectbox(
-    "Please select the borough of data to be visualized. Default is Manhattan",
+    "Please select the borough of data to be visualized. Default is Manhattan.",
     tuple(list(loc_num_order['Borough'].drop_duplicates()))
     )
 

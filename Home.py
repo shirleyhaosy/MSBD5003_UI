@@ -12,6 +12,7 @@ st.markdown(
     ### Please select the variable you would like to explore (options are also availale on the sidebar):
     - [Average Speed by Hour](/Average_Speed_by_Hour)
     - [Number of Orders](/Number_of_Orders)
+    - [Price and Profit](/Price_and_Profit)
     - [Average Waiting Time for Drivers to Pick Up Passengers](/Average_Waiting_Time)
     """
 )
